@@ -1,6 +1,7 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "prettier.enable": true,
+  "editor.formatOnSave": true, // 保存是格式化
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
@@ -27,5 +28,6 @@
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "html", "vue", "typescript", "typescriptreact"]
 }

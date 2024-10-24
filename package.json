@@ -1,5 +1,5 @@
 {
-  "name": "v3-electron-vite",
+  "name": "huangzhen",
   "version": "4.5.1",
   "description": "v3-electron-client",
   "author": {
@@ -34,8 +34,8 @@
     "prepare": "husky"
   },
   "build": {
-    "productName": "v3-electron-vite",
-    "appId": "com.app.v3-electron-vite",
+    "productName": "huangzhen",
+    "appId": "com.app.huangzhen",
     "directories": {
       "output": "release/v${version}-${platform}"
     },
@@ -122,11 +122,13 @@
     "path-to-regexp": "8.2.0",
     "pinia": "2.2.4",
     "screenfull": "6.0.2",
+    "uuid": "10.0.0",
     "vue": "3.5.11",
     "vue-router": "4.4.5",
     "vxe-table": "4.6.21",
     "vxe-table-plugin-element": "4.0.4",
-    "xe-utils": "3.5.31"
+    "xe-utils": "3.5.31",
+    "xlsx": "0.18.5"
   },
   "devDependencies": {
     "@types/lodash-es": "4.17.12",
@@ -148,7 +150,7 @@
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
     "sass": "1.78.0",
-    "typescript": "5.6.3",
+    "typescript": "5.3.2",
     "unocss": "0.63.4",
     "vite": "5.4.8",
     "vite-electron-plugin": "0.8.3",

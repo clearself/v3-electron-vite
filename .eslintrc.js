@@ -18,8 +18,9 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: "module",
     jsxPragma: "React",
+    requireConfigFile: false,
     ecmaFeatures: {
-      jsx: true,
+      jsx: false,
       tsx: true
     }
   },
