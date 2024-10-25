@@ -66,16 +66,16 @@ const beforeUpload: UploadProps["beforeUpload"] = (rawFile) => {
   return true
 }
 const mapping = {
-  name: "名称",
-  content: "内容",
+  code: "FNSKU",
+  title: "简化标题",
   num: "数量"
 }
 const formatData = (list: any) => {
   let arr = []
   const _list = cloneDeep(list || [])
   arr = _list.map((item: any) => ({
-    name: item[mapping.name],
-    content: item[mapping.content],
+    code: item[mapping.code],
+    title: item[mapping.title],
     num: item[mapping.num]
   }))
   return arr
@@ -89,8 +89,8 @@ const handelData = (list: any) => {
       for (let i = 0; i < item.num; i++) {
         _arr.push({
           id: uuidv4(),
-          name: item.name,
-          content: item.content
+          code: item.code,
+          title: item.title
         })
       }
     }

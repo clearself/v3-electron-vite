@@ -1,10 +1,10 @@
 {
   "name": "huangzhen",
-  "version": "4.5.1",
+  "version": "0.0.2",
   "description": "v3-electron-client",
   "author": {
-    "name": "nevlf",
-    "email": "2863180001@qq.com"
+    "name": "fuleiyang",
+    "email": "fuleiyang@qq.com"
   },
   "repository": {
     "type": "git",
@@ -68,10 +68,23 @@
     "win": {
       "icon": "static/icons/logo_256x256.ico",
       "artifactName": "${productName} v${version} ${arch}.${ext}",
-      "requestedExecutionLevel": "requireAdministrator",
-      "signtoolOptions": {
-        "sign": null
-      }
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "verifyUpdateCodeSignature": false,
+      "signDlls": true,
+      "signingHashAlgorithms": [
+        "sha256"
+      ],
+      "rfc3161TimeStampServer": "http://timestamp.digicert.com",
+      "certificateFile": "root.pfx",
+      "certificatePassword": "532023"
     },
     "dmg": {
       "sign": false

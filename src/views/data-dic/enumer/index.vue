@@ -20,8 +20,8 @@
           @selection-change="handleSelectionChange"
         >
           <el-table-column type="selection" :reserve-selection="true" width="50" align="center" />
-          <el-table-column prop="name" label="名称" align="center" />
-          <el-table-column prop="content" label="内容" align="center" />
+          <el-table-column prop="code" label="FNSKU" align="center" />
+          <el-table-column prop="title" label="简化标题" align="center" />
         </el-table>
       </div>
       <div class="pager-wrapper">
@@ -117,10 +117,12 @@ const exportExcelTable = (json: any[], name: string, titleArr: string[], sheetNa
   // data.splice(0, 0, fields);
 
   const ws = XLSX.utils.aoa_to_sheet(data)
+  const wch = [{ wch: 12 }, { wch: 50 }] // 设置列宽
   const wb = XLSX.utils.book_new()
   // 此处隐藏英文字段表头
   const wsrows = [{ hidden: false }]
   ws["!rows"] = wsrows // ws - worksheet
+  ws["!cols"] = wch // 设置列宽
   XLSX.utils.book_append_sheet(wb, ws, sheetName)
   /* generate file and send to client */
   XLSX.writeFile(wb, name + ".xlsx")
@@ -134,8 +136,8 @@ const exportToExcelSelected = () => {
     ElMessage.warning("请至少选择一条数据")
     return
   }
-  const titleArr = ["名称", "内容"] //表头第一行从左到右
-  const fields = ["name", "content"] //标题对应的字段名
+  const titleArr = ["FNSKU", "简化标题"] //表头第一行从左到右
+  const fields = ["code", "title"] //标题对应的字段名
   exportExcelTable(multipleSelection.value, fileName.value, titleArr, "sheetName", fields) //列表变量名、文件名、第一行标题、表名、字段名
 }
 const exportToExcel = () => {
@@ -143,8 +145,8 @@ const exportToExcel = () => {
     ElMessage.warning("请先导入数据")
     return
   }
-  const titleArr = ["名称", "内容"] //表头第一行从左到右
-  const fields = ["name", "content"] //标题对应的字段名
+  const titleArr = ["FNSKU", "简化标题"] //表头第一行从左到右
+  const fields = ["code", "title"] //标题对应的字段名
   exportExcelTable(allList.value, fileName.value, titleArr, "sheetName", fields) //列表变量名、文件名、第一行标题、表名、字段名
 }
 </script>
