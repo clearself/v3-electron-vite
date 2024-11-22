@@ -1,9 +1,9 @@
 {
-  "name": "huangzhen",
-  "version": "0.0.2",
-  "description": "v3-electron-client",
+  "name": "shengtu",
+  "version": "0.0.3",
+  "description": "A tool for importing, processing, and exporting data",
   "author": {
-    "name": "fuleiyang",
+    "name": "晟途公司",
     "email": "fuleiyang@qq.com"
   },
   "repository": {
@@ -34,8 +34,8 @@
     "prepare": "husky"
   },
   "build": {
-    "productName": "huangzhen",
-    "appId": "com.app.huangzhen",
+    "productName": "晟途",
+    "appId": "com.app.shengtu",
     "directories": {
       "output": "release/v${version}-${platform}"
     },

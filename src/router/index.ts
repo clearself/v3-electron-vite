@@ -66,7 +66,7 @@ export const constantRoutes: RouteRecordRaw[] = [
         component: () => import("@/views/data-dic/enumer/index.vue"),
         name: "enumer",
         meta: {
-          title: "内容导出",
+          title: "美国",
           keepAlive: true
         }
       },
@@ -75,7 +75,16 @@ export const constantRoutes: RouteRecordRaw[] = [
         component: () => import("@/views/data-dic/product/index.vue"),
         name: "product",
         meta: {
-          title: "产品导出",
+          title: "欧洲",
+          keepAlive: true
+        }
+      },
+      {
+        path: "temu",
+        component: () => import("@/views/data-dic/temu/index.vue"),
+        name: "temu",
+        meta: {
+          title: "TEMU",
           keepAlive: true
         }
       }

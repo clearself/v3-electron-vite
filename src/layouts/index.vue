@@ -3,7 +3,6 @@ import { computed, watchEffect } from "vue"
 import { storeToRefs } from "pinia"
 import { useSettingsStore } from "@/store/modules/settings"
 import useResize from "./hooks/useResize"
-import { APP_TITLE } from "@/hooks/useTitle"
 import { useWatermark } from "@/hooks/useWatermark"
 import { useDevice } from "@/hooks/useDevice"
 import { useLayoutMode } from "@/hooks/useLayoutMode"
@@ -41,7 +40,7 @@ watchEffect(() => {
 
 /** 开启或关闭系统水印 */
 watchEffect(() => {
-  showWatermark.value ? setWatermark(APP_TITLE) : clearWatermark()
+  showWatermark.value ? setWatermark(import.meta.env.VITE_APP_WATER) : clearWatermark()
 })
 </script>
 

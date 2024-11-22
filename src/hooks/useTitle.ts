@@ -1,7 +1,7 @@
 import { ref, watch } from "vue"
 
 /** 项目标题 */
-export const APP_TITLE = import.meta.env.VITE_APP_TITLE ?? "Huang Zhen"
+export const APP_TITLE = import.meta.env.VITE_APP_TITLE
 
 /** 动态标题 */
 const dynamicTitle = ref<string>("")
