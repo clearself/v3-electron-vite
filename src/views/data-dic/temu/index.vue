@@ -118,9 +118,8 @@ const exportExcelTable = (json: any[], name: string, titleArr: string[], sheetNa
   data.splice(0, 0, titleArr)
   // fields为英文字段表头,一般不需要，需要直接把下面注释打开即可
   // data.splice(0, 0, fields);
-
   const ws = XLSX.utils.aoa_to_sheet(data)
-  const wch = [{ wch: 12 }, { wch: 12 }, { wch: 12 }, { wch: 12 }, { wch: 12 }] // 设置列宽
+  const wch = [{ wch: 12 }, { wch: 15 }, { wch: 12 }, { wch: 12 }, { wch: 12 }] // 设置列宽
   const wb = XLSX.utils.book_new()
   // 此处隐藏英文字段表头
   const wsrows = [{ hidden: false }]

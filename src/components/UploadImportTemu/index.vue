@@ -67,7 +67,7 @@ const beforeUpload: UploadProps["beforeUpload"] = (rawFile) => {
 }
 const mapping = {
   type: "产品型号",
-  codeNum: "产品编码",
+  codeNum: "产品编号",
   color: "颜色",
   size: "尺寸",
   code: "FNSKU",
